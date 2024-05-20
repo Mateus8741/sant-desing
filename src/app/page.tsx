@@ -3,6 +3,7 @@
 import { NavBar } from '@/components/Navbar'
 import { Section1 } from '@/components/section1'
 import { Section2 } from '@/components/section2'
+import { Section3 } from '@/components/section3'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
@@ -15,6 +16,9 @@ export default function Home() {
     threshold: 0.5,
   })
   const { ref: aboutRef, inView: aboutInView } = useInView({ threshold: 0.5 })
+  const { ref: serviceRef, inView: serviceInView } = useInView({
+    threshold: 0.5,
+  })
   const { ref: contactRef, inView: contactInView } = useInView({
     threshold: 0.5,
   })
@@ -23,6 +27,8 @@ export default function Home() {
   if (projectsInView && activeSection !== 'projects')
     setActiveSection('projects')
   if (aboutInView && activeSection !== 'about') setActiveSection('about')
+  if (serviceInView && activeSection !== 'services')
+    setActiveSection('services')
   if (contactInView && activeSection !== 'contact') setActiveSection('contact')
 
   return (
@@ -55,16 +61,24 @@ export default function Home() {
         src="/maisProjetos.png"
         width={650}
         height={68}
-        className="cursor-pointer mt-12"
+        className="cursor-pointer my-20"
         alt="Mais projetos"
       />
+
+      <section
+        id="services"
+        ref={serviceRef}
+        className="flex items-center justify-center min-h-screen"
+      >
+        <Section3 />
+      </section>
 
       <section
         id="about"
         ref={aboutRef}
         className="flex items-center justify-center min-h-screen"
       >
-        <h2 className="font-bold text-white text-6xl">Sobre</h2>
+        <h2>sobre</h2>
       </section>
 
       <section
