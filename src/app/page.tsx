@@ -33,7 +33,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-36">
-      <div className="sticky top-2 z-10">
+      <Image src="/logo.svg" width={200} height={200} alt="Logo" />
+
+      <div className="sticky top-2 z-10 mt-4">
         <NavBar activeSection={activeSection} />
       </div>
 
@@ -49,11 +51,7 @@ export default function Home() {
         <Section1 />
       </section>
 
-      <section
-        id="projects"
-        ref={projectsRef}
-        className="flex flex-col w-full min-h-screen"
-      >
+      <section id="projects" ref={projectsRef} className="flex flex-col w-full">
         <Section2 />
       </section>
 
@@ -61,14 +59,14 @@ export default function Home() {
         src="/maisProjetos.png"
         width={650}
         height={68}
-        className="cursor-pointer my-20"
+        className="cursor-pointer mt-24"
         alt="Mais projetos"
       />
 
       <section
         id="services"
         ref={serviceRef}
-        className="flex items-center justify-center min-h-screen"
+        className="flex items-center justify-center"
       >
         <Section3 />
       </section>
