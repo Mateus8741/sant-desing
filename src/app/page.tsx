@@ -1,41 +1,62 @@
+'use client'
+
+import { NavBar } from '@/components/Navbar'
+import { useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+
 export default function Home() {
+  const [activeSection, setActiveSection] = useState('')
+
+  const { ref: homeRef, inView: homeInView } = useInView({ threshold: 0.5 })
+  const { ref: projectsRef, inView: projectsInView } = useInView({
+    threshold: 0.5,
+  })
+  const { ref: aboutRef, inView: aboutInView } = useInView({ threshold: 0.5 })
+  const { ref: contactRef, inView: contactInView } = useInView({
+    threshold: 0.5,
+  })
+
+  if (homeInView && activeSection !== 'home') setActiveSection('home')
+  if (projectsInView && activeSection !== 'projects')
+    setActiveSection('projects')
+  if (aboutInView && activeSection !== 'about') setActiveSection('about')
+  if (contactInView && activeSection !== 'contact') setActiveSection('contact')
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-36">
-      <h1 className="font-bold text-white text-9xl">
-        Criatividade & Identidade Visual
-      </h1>
+      <div className="sticky top-0 z-10">
+        <NavBar activeSection={activeSection} />
+      </div>
 
       <section
         id="home"
+        ref={homeRef}
         className="flex items-center justify-center min-h-screen"
       >
-        <h2 className="text-white text-4xl font-light">Projetos</h2>
-        <p className="text-white text-lg font-light">
-          Conheça alguns dos meus projetos
-        </p>
+        <h1 className="font-bold text-white text-9xl">
+          Criatividade & Identidade Visual
+        </h1>
       </section>
-
       <section
         id="projects"
+        ref={projectsRef}
         className="flex items-center justify-center min-h-screen"
       >
-        <h2 className="text-white text-4xl font-light">Projetos</h2>
-        <p className="text-white text-lg font-light">
-          Conheça alguns dos meus projetos
-        </p>
+        <h2 className="font-bold text-white text-6xl">Projetos</h2>
       </section>
-
-      <section id="about">
-        <h2 className="text-white text-4xl font-light">Sobre</h2>
-        <p className="text-white text-lg font-light">Saiba mais sobre mim</p>
+      <section
+        id="about"
+        ref={aboutRef}
+        className="flex items-center justify-center min-h-screen"
+      >
+        <h2 className="font-bold text-white text-6xl">Sobre</h2>
       </section>
-
       <section
         id="contact"
+        ref={contactRef}
         className="flex items-center justify-center min-h-screen"
       >
-        <h2 className="text-white text-4xl font-light">Contato</h2>
-        <p className="text-white text-lg font-light">Entre em contato comigo</p>
+        <h2 className="font-bold text-white text-6xl">Contato</h2>
       </section>
     </main>
   )

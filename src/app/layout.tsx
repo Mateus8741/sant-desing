@@ -1,4 +1,3 @@
-import { NavBar } from '@/components/Navbar'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -18,8 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-[#121214]`}>
-        <NavBar />
-
         {children}
 
         <footer className="flex items-center justify-center w-full h-24 bg-white">

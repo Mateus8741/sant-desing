@@ -5,15 +5,22 @@ const navLinks = [
   { name: 'Contato', href: '#contact' },
 ]
 
-export function NavBar() {
+interface NavLink {
+  activeSection: string
+}
+
+export function NavBar({ activeSection }: NavLink) {
   return (
     <nav className="flex m-auto items-center justify-between p-1 bg-white rounded-full w-fit">
-      <ul className="flex items-center space-x-8">
+      <ul className="flex items-center space-x-4">
         {navLinks.map((link) => (
-          <li key={link.href} className="bg-black py-2 px-4 rounded-full">
+          <li
+            key={link.href}
+            className={`py-2 px-4 rounded-full ${activeSection === link.href.slice(1) ? 'text-zinc-300 bg-black' : 'hover:text-zinc-300'}`}
+          >
             <a
               href={link.href}
-              className="text-white font-light hover:text-zinc-300"
+              className={`font-light ${activeSection === link.href.slice(1) ? 'text-white' : 'text-zinc-500'}`}
             >
               {link.name}
             </a>
