@@ -4,38 +4,30 @@ import { NavBar } from '@/components/Navbar'
 import { Section1 } from '@/components/section1'
 import { Section2 } from '@/components/section2'
 import { Section3 } from '@/components/section3'
+import { useSectionObserver } from '@/hooks/observer'
 import Image from 'next/image'
-import { useState } from 'react'
-import { useInView } from 'react-intersection-observer'
+import { useRef, useState } from 'react'
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState('')
+  const [activeSection, setActiveSection] = useState<string>('')
 
-  const { ref: homeRef, inView: homeInView } = useInView({ threshold: 0.5 })
-  const { ref: projectsRef, inView: projectsInView } = useInView({
-    threshold: 0.5,
-  })
-  const { ref: aboutRef, inView: aboutInView } = useInView({ threshold: 0.5 })
-  const { ref: serviceRef, inView: serviceInView } = useInView({
-    threshold: 0.5,
-  })
-  const { ref: contactRef, inView: contactInView } = useInView({
-    threshold: 0.5,
-  })
+  const homeRef = useRef<HTMLElement | null>(null)
+  const projectsRef = useRef<HTMLElement | null>(null)
+  const aboutRef = useRef<HTMLElement | null>(null)
+  const serviceRef = useRef<HTMLElement | null>(null)
+  const contactRef = useRef<HTMLElement | null>(null)
 
-  if (homeInView && activeSection !== 'home') setActiveSection('home')
-  if (projectsInView && activeSection !== 'projects')
-    setActiveSection('projects')
-  if (aboutInView && activeSection !== 'about') setActiveSection('about')
-  if (serviceInView && activeSection !== 'services')
-    setActiveSection('services')
-  if (contactInView && activeSection !== 'contact') setActiveSection('contact')
+  const sections = [homeRef, projectsRef, aboutRef, serviceRef, contactRef]
+
+  useSectionObserver({
+    setActiveSection,
+    sections: sections.map((ref) => ref.current),
+  })
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-36">
-      <Image src="/logo.svg" width={200} height={200} alt="Logo" />
-
-      <div className="sticky top-2 z-10 mt-4">
+      <div className="w-full sticky top-0 py-4 z-10 flex flex-col items-center gap-4 bg-[#121214]">
+        <Image src="/logo.svg" width={200} height={200} alt="Logo" />
         <NavBar activeSection={activeSection} />
       </div>
 
