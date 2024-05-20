@@ -3,6 +3,7 @@
 import { NavBar } from '@/components/Navbar'
 import { Section1 } from '@/components/section1'
 import { Section2 } from '@/components/section2'
+import Image from 'next/image'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -26,7 +27,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-36">
-      <div className="sticky top-0 z-10">
+      <div className="sticky top-2 z-10">
         <NavBar activeSection={activeSection} />
       </div>
 
@@ -49,6 +50,14 @@ export default function Home() {
       >
         <Section2 />
       </section>
+
+      <Image
+        src="/maisProjetos.png"
+        width={650}
+        height={68}
+        className="cursor-pointer mt-12"
+        alt="Mais projetos"
+      />
 
       <section
         id="about"
