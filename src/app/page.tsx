@@ -1,6 +1,8 @@
 'use client'
 
 import { NavBar } from '@/components/Navbar'
+import { Section1 } from '@/components/section1'
+import { Section2 } from '@/components/section2'
 import { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -31,19 +33,23 @@ export default function Home() {
       <section
         id="home"
         ref={homeRef}
-        className="flex items-center justify-center min-h-screen"
+        className="flex flex-col gap-4 justify-center min-h-screen"
       >
         <h1 className="font-bold text-white text-9xl">
           Criatividade & Identidade Visual
         </h1>
+
+        <Section1 />
       </section>
+
       <section
         id="projects"
         ref={projectsRef}
-        className="flex items-center justify-center min-h-screen"
+        className="flex flex-col w-full min-h-screen"
       >
-        <h2 className="font-bold text-white text-6xl">Projetos</h2>
+        <Section2 />
       </section>
+
       <section
         id="about"
         ref={aboutRef}
@@ -51,6 +57,7 @@ export default function Home() {
       >
         <h2 className="font-bold text-white text-6xl">Sobre</h2>
       </section>
+
       <section
         id="contact"
         ref={contactRef}
