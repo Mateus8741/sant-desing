@@ -72,12 +72,11 @@ export default function Home() {
       >
         <Section2 />
 
-        <Link href="https://www.behance.net/santdsign">
+        <Link href="https://www.behance.net/santdsign" className="my-12">
           <Image
-            src="/maisProjetos.png"
+            src="/maisProjetos.svg"
             width={650}
             height={68}
-            className="cursor-pointer my-12"
             alt="Mais projetos"
           />
         </Link>
