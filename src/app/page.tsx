@@ -7,6 +7,7 @@ import { Section3 } from '@/components/section3'
 import { Section4 } from '@/components/section4'
 import { Section5 } from '@/components/section5'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 export default function Home() {
@@ -71,13 +72,15 @@ export default function Home() {
       >
         <Section2 />
 
-        <Image
-          src="/maisProjetos.png"
-          width={650}
-          height={68}
-          className="cursor-pointer my-12"
-          alt="Mais projetos"
-        />
+        <Link href="https://www.behance.net/santdsign">
+          <Image
+            src="/maisProjetos.png"
+            width={650}
+            height={68}
+            className="cursor-pointer my-12"
+            alt="Mais projetos"
+          />
+        </Link>
       </section>
 
       <section
