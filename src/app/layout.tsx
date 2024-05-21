@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -19,9 +20,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-[#121214]`}>
         {children}
 
-        <footer className="flex items-center justify-center w-full h-24 bg-white">
-          <p className="text-black font-light">Feito com ❤️ por mim</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   )
