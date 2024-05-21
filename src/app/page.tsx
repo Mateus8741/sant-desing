@@ -5,6 +5,7 @@ import { Section1 } from '@/components/section1'
 import { Section2 } from '@/components/section2'
 import { Section3 } from '@/components/section3'
 import { Section4 } from '@/components/section4'
+import { Section5 } from '@/components/section5'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
@@ -100,7 +101,7 @@ export default function Home() {
         ref={contactRef}
         className="flex items-center justify-center scroll-m-28"
       >
-        <h2 className="font-bold text-white text-6xl">Contato</h2>
+        <Section5 />
       </section>
     </main>
   )
