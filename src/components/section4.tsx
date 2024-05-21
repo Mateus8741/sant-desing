@@ -43,7 +43,7 @@ export function Section4() {
           <p className="">Social</p>
 
           <div className="flex gap-4">
-            <Link href="/">
+            <Link href="https://www.linkedin.com/in/ramon-santos-307343289/">
               <Image
                 src="/linkedin.svg"
                 width={50}
@@ -52,7 +52,7 @@ export function Section4() {
               />
             </Link>
 
-            <Link href="/">
+            <Link href="https://www.instagram.com/santdsign/">
               <Image src="/insta.svg" width={50} height={50} alt="Instagram" />
             </Link>
           </div>
