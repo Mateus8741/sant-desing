@@ -4,6 +4,7 @@ import { NavBar } from '@/components/Navbar'
 import { Section1 } from '@/components/section1'
 import { Section2 } from '@/components/section2'
 import { Section3 } from '@/components/section3'
+import { Section4 } from '@/components/section4'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
@@ -81,7 +82,7 @@ export default function Home() {
       <section
         id="services"
         ref={serviceRef}
-        className="flex items-center justify-center scroll-m-28"
+        className="flex items-center justify-center w-full scroll-m-28"
       >
         <Section3 />
       </section>
@@ -89,9 +90,9 @@ export default function Home() {
       <section
         id="about"
         ref={aboutRef}
-        className="flex items-center justify-center scroll-m-28"
+        className="flex items-center justify-center w-full scroll-m-28"
       >
-        <h2>sobre</h2>
+        <Section4 />
       </section>
 
       <section
