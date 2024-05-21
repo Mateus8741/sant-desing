@@ -6,7 +6,7 @@ export function Section1() {
   }
 
   return (
-    <div className="flex gap-4 text-white justify-between pr-12">
+    <div className="flex w-5/6 text-white justify-between">
       <div className="flex gap-24">
         <div className="flex flex-col gap-3">
           <p>Vamos conversar?</p>

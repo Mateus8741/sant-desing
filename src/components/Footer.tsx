@@ -4,7 +4,7 @@ export function Footer() {
   const YEAR = new Date().getFullYear()
 
   return (
-    <footer className="flex items-center justify-between px-24 py-8 text-white">
+    <footer className="flex items-center justify-between px-24 py-8 text-white w-full">
       <div className="flex gap-1">
         <p className="font-light">{YEAR} © Sant Design - By </p>
         <Link href="https://www.codewaveds.cloud">

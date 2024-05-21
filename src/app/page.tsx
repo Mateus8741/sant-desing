@@ -45,7 +45,7 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-col items-center justify-between px-36">
+    <main className="flex flex-col items-center justify-between px-36 max-w-screen-2xl">
       <div
         className={`w-full sticky top-0 py-4 z-10 flex items-center bg-[#121214]`}
       >
