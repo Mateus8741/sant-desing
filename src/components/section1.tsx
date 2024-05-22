@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 export function Section1() {
@@ -15,12 +16,24 @@ export function Section1() {
         <div className="flex flex-col gap-3">
           <p>Vamos conversar?</p>
 
-          <button
-            className="bg-zinc-800 text-white p-2 rounded-full hover:bg-zinc-700"
-            onClick={handleClick}
-          >
-            Whatsapp
-          </button>
+          <div className="relative inline-block">
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-zinc-600"
+              initial={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 0, scale: 1.5 }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: 'loop',
+              }}
+            />
+            <motion.button
+              className="relative bg-zinc-800 w-full text-white p-2 rounded-full hover:bg-zinc-700"
+              onClick={handleClick}
+            >
+              Whatsapp
+            </motion.button>
+          </div>
         </div>
 
         <p className="text-lg w-[369px]">
