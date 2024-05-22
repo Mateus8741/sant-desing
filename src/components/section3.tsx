@@ -2,32 +2,32 @@ const services = [
   {
     title: 'Branding',
     description:
-      'Um branding eficaz impulsiona o reconhecimento do cliente e o valor percebido da marca. Construindo uma identidade distintiva, que possui conexão emocional com o público-alvo, definindo valores, mensagem e estratégias que diferenciam você no mercado.',
+      'Tenha um reconhecimento eficaz da sua marca construindo uma identidade única e distintiva, que se conecta diretamente com seu público. Com uma estratégia de branding impulsionamos o reconhecimento da sua marca no mercado.',
   },
   {
     title: 'Identidade Visual',
     description:
-      'Uma identidade visual bem elaborada contribui para a memorização da marca e a criação de uma imagem memorável e coesa.',
+      'Utilize de uma identidade visual bem elaborada que  contribui para a memorização da sua marca e diferencia você no mercado. A partir da análise do seu problema, decidimos qual o melhor caminho para produzir sua marca.',
   },
   {
     title: 'UX/ UI',
     description:
-      'O design de interface é o processo de criar interfaces visualmente atraentes e funcionais para aplicativos, sites, landing pages e outros.',
+      'Uma interface atrativa e funcional é oque diferencia seu site ou aplicativo no mercado. Garanta que seu cliente possua a melhor experiência com seu serviço.',
   },
   {
     title: 'Social media',
     description:
-      'Criação de material com peças gráficas para redes sociais e anúncios e materiais impressos.',
+      'Alcance mais visibilidade e autoridade de seu material em mídias sociais, através de uma estratégia e cronogramas para suas publicações.',
   },
   {
-    title: 'UX Writer',
+    title: 'UX Writing',
     description:
-      'Criar textos que facilitam a interação dos usuários com sites, aplicativos e softwares. Garantindo que a comunicação entre o produto e o usuário seja clara, objetiva e eficaz, proporcionando uma experiência de uso intuitiva e agradável.',
+      'Textos que facilitam a interação dos usuários com seu site ou aplicativo. Garantimos que a comunicação entre o produto e o usuário seja clara e eficaz, trazendo uma experiência intuitiva e agradável.',
   },
   {
     title: 'Naming',
     description:
-      'Textos que facilitam o entendimento e a interação dos usuários com sites e aplicativos. Garantindo a comunicação eficaz e direta, proporcionando uma experiência de uso intuitiva e agradável, como este por exemplo.',
+      'Aliado a estratégia de Branding o processo de Naming é crucial para destacar seu lugar no mercado, um nome simples e memorável facilita o entendimento e a memorização de sua marca.',
   },
 ]
 
@@ -42,7 +42,7 @@ export function Section3() {
             <div className="flex items-center gap-3">
               • <li className="font-bold text-3xl">{service.title}</li>
             </div>
-            <li className="mt-4 ml-6 text-left w-96 text-wrap pr-1">
+            <li className="mt-4 ml-6 text-left w-[380px] text-wrap pr-1">
               {service.description}
             </li>
           </ul>
