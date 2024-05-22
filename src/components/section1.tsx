@@ -1,8 +1,12 @@
 import Image from 'next/image'
 
 export function Section1() {
+  const number = '5588994884147'
+
+  const text = 'Boa tarde! gostaria de conversar sobre um serviço.'
+
   function handleClick() {
-    window.open('https://wa.me/5511999999999', '_blank')
+    window.open(`https://wa.me/${number}?text=${text}`, '_blank')
   }
 
   return (
