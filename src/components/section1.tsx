@@ -25,6 +25,7 @@ export function Section1() {
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: 'loop',
+                repeatDelay: 0.5,
               }}
             />
             <motion.button
