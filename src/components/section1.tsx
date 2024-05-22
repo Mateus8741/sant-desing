@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 export function Section1() {
   const number = '5588994884147'
@@ -41,8 +40,6 @@ export function Section1() {
           Tudo começa com uma boa conversa, vamos tentar entender seu problema.
         </p>
       </div>
-
-      <Image src="/vertical.svg" width={80} height={80} alt="Seta para baixo" />
     </div>
   )
 }

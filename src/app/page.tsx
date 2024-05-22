@@ -1,6 +1,7 @@
 'use client'
 
 import { NavBar } from '@/components/Navbar'
+import { TypingTitle } from '@/components/TypingTitle'
 import { Section1 } from '@/components/section1'
 import { Section2 } from '@/components/section2'
 import { Section3 } from '@/components/section3'
@@ -56,11 +57,9 @@ export default function Home() {
       <section
         id="home"
         ref={homeRef}
-        className="flex flex-col gap-4 justify-center mb-24 scroll-m-28"
+        className="flex flex-col w-full gap-4 justify-center mb-24 scroll-m-28"
       >
-        <h1 className="font-bold text-white text-9xl mb-12">
-          Criatividade & Identidade Visual
-        </h1>
+        <TypingTitle />
 
         <Section1 />
       </section>
