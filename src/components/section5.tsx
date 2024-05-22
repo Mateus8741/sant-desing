@@ -26,7 +26,7 @@ export function Section5() {
           }}
         />
         <motion.button
-          className="relative w-52 h-16 bg-white text-black font-bold rounded-full hover:bg-gray-300"
+          className="relative w-52 h-16 bg-white text-black font-bold rounded-full hover:bg-gray-300 transition duration-300 ease-in-out"
           onClick={handleClick}
         >
           Whatsapp

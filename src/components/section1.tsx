@@ -29,7 +29,7 @@ export function Section1() {
               }}
             />
             <motion.button
-              className="relative bg-zinc-800 w-full text-white p-2 rounded-full hover:bg-zinc-700"
+              className="relative bg-zinc-800 w-full text-white p-2 rounded-full hover:bg-zinc-700 transition duration-300 ease-in-out"
               onClick={handleClick}
             >
               Whatsapp
