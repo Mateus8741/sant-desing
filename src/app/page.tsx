@@ -58,7 +58,7 @@ export default function Home() {
         ref={homeRef}
         className="flex flex-col gap-4 justify-center mb-24 scroll-m-28"
       >
-        <h1 className="font-bold text-white text-9xl">
+        <h1 className="font-bold text-white text-9xl mb-12">
           Criatividade & Identidade Visual
         </h1>
 
