@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -35,11 +36,14 @@ export function Section2() {
       </p>
 
       <div className="flex flex-wrap gap-3 mt-10">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <Link key={project.alt} href={project.href}>
-            <div
+            <motion.div
               key={project.alt}
               className="relative rounded-[2.5rem] overflow-hidden hover:scale-95 transition-transform duration-300 ease-in-out"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: index * 0.5 }}
             >
               <Image
                 src={project.src}
@@ -52,7 +56,7 @@ export function Section2() {
                   {project.alt}
                 </span>
               </div>
-            </div>
+            </motion.div>
           </Link>
         ))}
       </div>
