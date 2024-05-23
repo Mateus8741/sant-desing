@@ -27,7 +27,7 @@ const projects = [
 
 export function Section2() {
   return (
-    <div className="text-white">
+    <div className="text-white w-full">
       <h2 className="font-bold text-5xl">Projetos</h2>
 
       <p className="text-lg font-normal w-[369px] mt-4">
@@ -35,7 +35,7 @@ export function Section2() {
         outros.
       </p>
 
-      <div className="flex flex-wrap gap-3 mt-10">
+      <div className="grid grid-cols-2 w-full gap-6 mt-10">
         {projects.map((project, index) => (
           <Link key={project.alt} href={project.href}>
             <motion.div
