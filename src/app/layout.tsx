@@ -8,6 +8,13 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Sant Design',
   description: 'Sant Design é uma agência de design e desenvolvimento web.',
+  publisher: 'Sant Design',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  applicationName: 'Sant Design',
+  keywords: ['design', 'web', 'development'],
+  themeColor: '#121214',
 }
 
 export default function RootLayout({
