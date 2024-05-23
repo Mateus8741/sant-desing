@@ -1,5 +1,6 @@
 'use client'
 
+import { ButtonBehance } from '@/components/ButtonBehance'
 import { NavBar } from '@/components/Navbar'
 import { TypingTitle } from '@/components/TypingTitle'
 import { Section1 } from '@/components/section1'
@@ -71,14 +72,16 @@ export default function Home() {
       >
         <Section2 />
 
-        <Link href="https://www.behance.net/santdsign" className="my-12">
-          <Image
-            src="/maisProjetos.svg"
-            width={650}
-            height={68}
-            alt="Mais projetos"
-          />
-        </Link>
+        <div className="flex gap-3 items-center">
+          <p className="font-bold text-[#2686F3] text-6xl">Mais projetos</p>
+
+          <Link
+            href="https://www.behance.net/santdsign"
+            className="my-12 flex gap-3 items-center"
+          >
+            <ButtonBehance />
+          </Link>
+        </div>
       </section>
 
       <section
