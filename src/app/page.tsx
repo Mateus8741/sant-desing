@@ -52,7 +52,13 @@ export default function Home() {
         className={`w-full sticky top-0 py-4 z-10 flex justify-center items-center bg-[#121214]`}
       >
         <Link href="/">
-          <Image src="/logo.svg" width={200} height={200} alt="Logo" />
+          <Image
+            src="/logo.svg"
+            width={200}
+            height={200}
+            alt="Logo"
+            className="h-[3rem] md:h-[8rem]"
+          />
         </Link>
 
         <NavBar activeSection={activeSection} />
