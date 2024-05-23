@@ -10,10 +10,10 @@ export function Section1() {
   }
 
   return (
-    <div className="flex w-5/6 text-white justify-between">
-      <div className="flex gap-24">
+    <div className="flex text-white">
+      <div className="flex gap-24 justify-around w-full">
         <div className="flex flex-col gap-3">
-          <p>Vamos conversar?</p>
+          <p className="text-2xl">Vamos conversar?</p>
 
           <div className="relative inline-block">
             <motion.div
@@ -36,9 +36,12 @@ export function Section1() {
           </div>
         </div>
 
-        <p className="text-lg w-[369px]">
-          Tudo começa com uma boa conversa, vamos tentar entender seu problema.
-        </p>
+        <div className="border-b-4 border-[#2686F3] w-[360px]">
+          <p className="text-lg text-center">
+            Tudo começa com uma boa conversa, vamos tentar entender seu
+            problema.
+          </p>
+        </div>
       </div>
     </div>
   )

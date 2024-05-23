@@ -51,7 +51,10 @@ export default function Home() {
       <div
         className={`w-full sticky top-0 py-4 z-10 flex items-center bg-[#121214]`}
       >
-        <Image src="/logo.svg" width={200} height={200} alt="Logo" />
+        <Link href="/">
+          <Image src="/logo.svg" width={200} height={200} alt="Logo" />
+        </Link>
+
         <NavBar activeSection={activeSection} />
       </div>
 
