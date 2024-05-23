@@ -47,9 +47,9 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex flex-col items-center justify-between px-36 max-w-screen-2xl">
+    <main className="flex flex-col items-center md:w-full justify-between px-4 md:px-36 max-w-screen-2xl">
       <div
-        className={`w-full sticky top-0 py-4 z-10 flex items-center bg-[#121214]`}
+        className={`w-full sticky top-0 py-4 z-10 flex justify-center items-center bg-[#121214]`}
       >
         <Link href="/">
           <Image src="/logo.svg" width={200} height={200} alt="Logo" />
@@ -61,7 +61,7 @@ export default function Home() {
       <section
         id="home"
         ref={homeRef}
-        className="flex flex-col w-full gap-4 justify-center mb-24 scroll-m-28"
+        className="flex flex-col w-full gap-4 justify-center mb-12 md:mb-24 scroll-m-28"
       >
         <TypingTitle />
 
@@ -75,12 +75,14 @@ export default function Home() {
       >
         <Section2 />
 
-        <div className="flex gap-3 items-center">
-          <p className="font-bold text-[#2686F3] text-6xl">Mais projetos</p>
+        <div className="flex flex-col md:flex-row mt-6 md:mt-0 gap-3 items-center">
+          <p className="font-bold text-[#2686F3] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl">
+            Mais projetos
+          </p>
 
           <Link
             href="https://www.behance.net/santdsign"
-            className="my-12 flex gap-3 items-center"
+            className="my-6 md:my-12 flex items-center"
           >
             <ButtonBehance />
           </Link>

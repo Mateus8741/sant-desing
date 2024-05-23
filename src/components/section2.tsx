@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Cards } from './Cards'
 
 const projects = [
   {
@@ -28,36 +26,15 @@ const projects = [
 export function Section2() {
   return (
     <div className="text-white w-full">
-      <h2 className="font-bold text-5xl">Projetos</h2>
+      <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl">Projetos</h2>
 
-      <p className="text-lg font-normal w-[369px] mt-4">
-        Projetos de indentidade visual, diagramação, social media entre outros.
+      <p className="text-base sm:text-lg font-normal w-full sm:w-[369px] mt-4">
+        Projetos de identidade visual, diagramação, social media entre outros.
       </p>
 
-      <div className="grid grid-cols-2 w-full gap-6 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-4 sm:gap-6 mt-8">
         {projects.map((project, index) => (
-          <Link key={project.alt} href={project.href}>
-            <motion.div
-              key={project.alt}
-              className="relative rounded-[2.5rem] overflow-hidden hover:scale-95 transition-transform duration-300 ease-in-out"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: index * 0.5 }}
-            >
-              <Image
-                src={project.src}
-                width={560}
-                height={283}
-                alt={project.alt}
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                <span className="text-white text-2xl font-bold">
-                  {project.alt}
-                </span>
-              </div>
-            </motion.div>
-          </Link>
+          <Cards key={project.alt} {...project} index={index} />
         ))}
       </div>
     </div>

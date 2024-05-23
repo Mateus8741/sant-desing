@@ -15,7 +15,7 @@ const services = [
       'Uma interface atrativa e funcional é oque diferencia seu site ou aplicativo no mercado. Garanta que seu cliente possua a melhor experiência com seu serviço.',
   },
   {
-    title: 'Social media',
+    title: 'Social Media',
     description:
       'Alcance mais visibilidade e autoridade de seu material em mídias sociais, através de uma estratégia e cronogramas para suas publicações.',
   },
@@ -34,18 +34,24 @@ const services = [
 export function Section3() {
   return (
     <div className="text-white">
-      <h2 className="font-bold text-center text-5xl">Serviços</h2>
+      <h2 className="font-bold text-center text-3xl sm:text-4xl lg:text-5xl">
+        Serviços
+      </h2>
 
-      <div className="flex flex-wrap w-full gap-6 mt-10 bg-zinc-800 p-24 justify-between rounded-3xl">
+      <div className="grid grid-cols-1 gap-12 mt-10 bg-[#1E1E1E] p-6 md:grid-cols-2 md:p-14 rounded-3xl">
         {services.map((service, index) => (
-          <ul key={index} className="flex flex-col">
+          <div
+            key={index}
+            className="flex flex-col bg-[#121214] md:bg-transparent w-full p-6 rounded-3xl"
+          >
             <div className="flex items-center gap-3">
-              • <li className="font-bold text-3xl">{service.title}</li>
+              <span className="text-xl">&#8226;</span>
+              <p className="font-bold text-xl">{service.title}</p>
             </div>
-            <li className="mt-4 ml-6 text-left w-[380px] text-wrap pr-1">
+            <p className="mt-2 ml-6 pr-8 text-base  sm:text-lg">
               {service.description}
-            </li>
-          </ul>
+            </p>
+          </div>
         ))}
       </div>
     </div>

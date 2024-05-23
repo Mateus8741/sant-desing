@@ -29,7 +29,7 @@ export function NavBar({ activeSection }: NavLink) {
   }, [activeSection])
 
   return (
-    <nav className="relative flex m-auto items-center justify-between p-1 bg-white rounded-full w-fit">
+    <nav className="relative md:flex hidden m-auto items-center justify-between p-1 bg-white rounded-full w-fit">
       <motion.div
         className="absolute top-0 bottom-0 m-1 rounded-full bg-black"
         initial={false}
