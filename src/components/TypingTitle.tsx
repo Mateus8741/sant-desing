@@ -4,7 +4,7 @@ const words = [
   'Identidade Visual',
   'Branding',
   'UX/ UI',
-  'Social media',
+  'Social Media',
   'UX Writing',
   'Naming',
 ]

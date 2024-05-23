@@ -31,8 +31,7 @@ export function Section2() {
       <h2 className="font-bold text-5xl">Projetos</h2>
 
       <p className="text-lg font-normal w-[369px] mt-4">
-        Projetos de indentidade visual, diagramação, social media e entre
-        outros.
+        Projetos de indentidade visual, diagramação, social media entre outros.
       </p>
 
       <div className="grid grid-cols-2 w-full gap-6 mt-10">
