@@ -50,6 +50,7 @@ export function Section2() {
                 width={560}
                 height={283}
                 alt={project.alt}
+                className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
                 <span className="text-white text-2xl font-bold">
